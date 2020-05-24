@@ -1,0 +1,6 @@
+FROM python:3.8-slim
+RUN apt-get update
+RUN apt-get install iputils-ping -y
+RUN apt-get install kafkacat -y
+RUN pip install confluent-kafka
+COPY confluentconsumerregex.py .

@@ -1,0 +1,20 @@
+ 1   Timestamp
+ 2  Log Level
+ 3  Request ID
+ 4  Record Format Version
+ 5  Source IP
+ 6  DNS Domain
+ 7  Message Type
+ 8  Operation
+ 9  Auth User
+ 10  Auth Domain
+ 11  HTTP Code
+ 12  Source Bytes
+ 13  Response Bytes
+ 14 Elapsed Time
+ 15 domain
+ 16 bucket
+ 17 object
+
+
+ksql> CREATE STREAM gatewaystruct (datestamp STRING,timestamp STRING,millisec STRING,loglevel STRING,requestid STRING,recordformatversion STRING,sourceip STRING,dnsdomain STRING,messagetype STRING,operation STRING,authuser STRING,authdomain STRING,httpcode STRING,sourcebytes STRING,responsebytes STRING,elapsedtime STRING,domain STRING,bucket STRING,object STRING) WITH (KAFKA_TOPIC='commalogs', VALUE_FORMAT='DELIMITED');
